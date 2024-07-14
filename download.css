@@ -1,0 +1,200 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #598ede;
+}
+
+nav ul li a:active {
+    color: #0b3a80;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.intro {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.intro:hover {
+    transform: translateY(-10px);
+}
+
+.download-table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.download-table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.download-table th, .download-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.download-table th {
+    background-color: #f2f2f2;
+}
+
+.download-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.icns {
+    width: 40px;
+}
+
+.dbtn {
+    background-color: #007BFF;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 12px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.dbtn:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 29px; 
+    height: 29px; 
+    vertical-align: middle;
+}
+
+.social-icons a:hover img {
+    opacity: 0.7;
+}
+
+.it img.icn {
+    width: 50px;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .download-table-container {
+        overflow-x: auto;
+    }
+
+    .download-table {
+        width: 100%;
+        display: block;
+    }
+
+    .download-table thead, .download-table tbody, .download-table th, .download-table td, .download-table tr {
+        display: block;
+    }
+
+    .download-table tr {
+        margin-bottom: 10px;
+    }
+
+    .download-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .download-table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: calc(50% - 20px);
+        text-align: left;
+        font-weight: bold;
+    }
+}
